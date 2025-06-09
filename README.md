@@ -28,18 +28,18 @@ Nota: Este entorno de ejecución puede diferir del entorno oficial de Kaggle. Es
 ## 3. Ejecución del Código
 A continuación se muestra el fragmento necesario para descargar el dataset:
 
-``bash
+```bash
 import kagglehub
-``
+```
 
 
 # Descarga del dataset y almacenamiento en ruta local
 
-``bash
+```bash
 dragonheir_basket_optimisation_path = kagglehub.dataset_download('dragonheir/basket-optimisation')
 
 print('Data source import complete.')
-``
+```
 
 Una vez ejecutado, los archivos estarán disponibles localmente en la ruta asignada por kagglehub.
 
@@ -48,19 +48,20 @@ Una vez ejecutado, los archivos estarán disponibles localmente en la ruta asign
 --
 ## 4. Estructura del Proyecto
 
+```bash
 .
 ├── README.md
 ├── main.ipynb
 └── data/
     └── basket-optimisation/  # Carpeta descargada automáticamente por kagglehub
-
+```
 
 --
 
 ## 5. Posprocesamiento sugerido
 Puedes usar pandas para cargar y explorar los archivos descargados:
 
-``bash
+```bash
 import pandas as pd
 import os
 
@@ -68,4 +69,4 @@ data_path = os.path.join(dragonheir_basket_optimisation_path, 'market_basket.csv
 df = pd.read_csv(data_path)
 
 print(df.head())
-``
+```
